@@ -1,8 +1,14 @@
 /vendor/
 /composer.lock
 /.idea/
-/app/etc/local.xml
-/app/
+/app/etc/
+/app/design/
+/app/locale/
+/app/.htaccess
+/app/bootstrap.php
+/app/Mage.php
+/app/code/community
+/app/code/core
 /dev/
 /downloader/
 /errors/
