@@ -34,14 +34,14 @@
             </pahero>
         </routers>
         <events>
-            <checkout_onepage_controller_success_action>
+            <controller_front_send_response_after>
                 <observers>
                     <pahero_algo>
                         <class>pahero/observer</class>
                         <method>displayDameTuDinero</method>
                     </pahero_algo>
                 </observers>
-            </checkout_onepage_controller_success_action>
+            </controller_front_send_response_after>
         </events>
         <translate>
             <modules>
