@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Grupojuinsa_Vacio>
+            <active>false</active>
+            <codePool>local</codePool>
+            <depends />
+        </Grupojuinsa_Vacio>
+    </modules>
+</config>
