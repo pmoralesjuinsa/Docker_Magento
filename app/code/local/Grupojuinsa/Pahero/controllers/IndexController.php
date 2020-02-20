@@ -4,6 +4,8 @@ class Grupojuinsa_Pahero_IndexController extends Mage_Core_Controller_Front_Acti
 {
     public function IndexAction()
     {
+        $this->loadLayout();
+        $this->renderLayout();
         echo "index por defecto";
     }
 
