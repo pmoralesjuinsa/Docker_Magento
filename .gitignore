@@ -2,6 +2,7 @@
 /composer.lock
 /.idea/
 /app/etc/
+!/app/etc/Grupojuinsa_Pahero.xml
 /app/design/
 /app/locale/
 /app/.htaccess
