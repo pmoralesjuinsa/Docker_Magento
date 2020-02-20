@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Grupojuinsa_Pahero>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends />
+        </Grupojuinsa_Pahero>
+    </modules>
+</config>

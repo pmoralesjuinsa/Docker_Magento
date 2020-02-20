@@ -1,8 +1,9 @@
 /vendor/
 /composer.lock
 /.idea/
-/app/etc/
-!app/etc/modules/Grupojuinsa_Pahero.xml
+/app/etc/**
+!/app/etc/modules/
+!/app/etc/modules/Grupojuinsa_Pahero.xml
 /app/design/
 /app/locale/
 /app/.htaccess
