@@ -4,7 +4,10 @@
 /app/etc/**
 !/app/etc/modules/
 !/app/etc/modules/Grupojuinsa_*.xml
-/app/design/
+/app/design/**
+!app/design/frontend/
+!app/design/frontend/pahero_theme/
+!app/design/frontend/pahero_theme/**
 /app/locale/
 /app/.htaccess
 /app/bootstrap.php
@@ -19,7 +22,10 @@
 /lib/
 /media/
 /shell/
-/skin/
+/skin/**
+!skin/frontend/
+!skin/frontend/pahero_theme/
+!skin/frontend/pahero_theme/**
 /var/
 /.htaccess
 /.htaccess.sample
