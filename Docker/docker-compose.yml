@@ -46,6 +46,8 @@ services:
       context: ./ApachePhp
     volumes:
       - ./../:/var/www/html
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
     depends_on:
       - chrome
       - miservicio_mysql
