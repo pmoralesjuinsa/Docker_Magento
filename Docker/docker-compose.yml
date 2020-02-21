@@ -7,11 +7,16 @@ services:
     container_name: selenium-hub
     ports:
       - 4444:4444
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
 
   chrome:
     image: selenium/node-chrome:3.141.59-zinc
     volumes:
       - /dev/shm:/dev/shm
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
     depends_on:
       - selenium-hub
     links:
@@ -32,6 +37,8 @@ services:
       context: ./MySql
     volumes:
       - puta_madre:/var/lib/mysql
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
     ports:
       - 3306:3306
     environment:
