@@ -2,11 +2,13 @@
 
 class Grupojuinsa_Pahero_IndexController extends Mage_Core_Controller_Front_Action
 {
+    public $textoIndex;
+
     public function IndexAction()
     {
         $this->loadLayout();
         $this->renderLayout();
-        echo "index por defecto";
+        $this->textoIndex = "index por defecto";
     }
 
     public function LamanoAction()

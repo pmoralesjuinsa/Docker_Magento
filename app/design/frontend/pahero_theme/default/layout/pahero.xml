@@ -3,9 +3,9 @@
         <reference name="content">
         </reference>
     </default>
-    <test_index_index>
+    <pahero_index_index>
         <reference name="content">
-            <block type="pahero/index" name="no es importanteS" template="pahero/mibloque.phtml" />
+            <block type="pahero/paheroblock" name="no es importante" template="pahero/paheroblock.phtml" />
         </reference>
-    </test_index_index>
+    </pahero_index_index>
 </layout>
