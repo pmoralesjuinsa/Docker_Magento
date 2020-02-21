@@ -8,15 +8,16 @@ services:
     ports:
       - 4444:4444
     volumes:
-      - "/etc/timezone:/etc/timezone:ro"
-      - "/etc/localtime:/etc/localtime:ro"
+      - /etc/timezone:/etc/timezone
+      - /etc/localtime:/etc/localtime
+      - TZ=Europe/Madrid
 
   chrome:
     image: selenium/node-chrome:3.141.59-zinc
     volumes:
       - /dev/shm:/dev/shm
-      - "/etc/timezone:/etc/timezone:ro"
-      - "/etc/localtime:/etc/localtime:ro"
+      - /etc/timezone:/etc/timezone
+      - /etc/localtime:/etc/localtime
     depends_on:
       - selenium-hub
     links:
@@ -26,6 +27,7 @@ services:
       - HUB_PORT=4444
       - SCREEN_WIDTH=2560
       - SCREEN_HEIGHT=1440
+      - TZ=Europe/Madrid
     ports:
       - 5555:5555
 
@@ -37,8 +39,8 @@ services:
       context: ./MySql
     volumes:
       - puta_madre:/var/lib/mysql
-      - "/etc/timezone:/etc/timezone:ro"
-      - "/etc/localtime:/etc/localtime:ro"
+      - /etc/timezone:/etc/timezone
+      - /etc/localtime:/etc/localtime
     ports:
       - 3306:3306
     environment:
@@ -46,6 +48,7 @@ services:
       - MYSQL_DATABASE=magento_test
       - MYSQL_USER=mangora
       - MYSQL_PASSWORD=AA12bb33cc
+      - TZ=Europe/Madrid
 
   miservicio_php:
     container_name: miservicio_php
@@ -53,8 +56,8 @@ services:
       context: ./ApachePhp
     volumes:
       - ./../:/var/www/html
-      - "/etc/timezone:/etc/timezone:ro"
-      - "/etc/localtime:/etc/localtime:ro"
+      - /etc/timezone:/etc/timezone
+      - /etc/localtime:/etc/localtime
     depends_on:
       - chrome
       - miservicio_mysql
@@ -66,6 +69,7 @@ services:
     environment:
       - APACHE_RUN_USER=#1000
       - APACHE_RUN_GROUP=#1000
+      - TZ=Europe/Madrid
     networks:
       default:
         aliases:
