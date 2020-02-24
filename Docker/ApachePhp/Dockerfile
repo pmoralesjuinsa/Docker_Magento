@@ -45,5 +45,6 @@ RUN echo 'xdebug.profiler_enable_trigger=1' >> /usr/local/etc/php/conf.d/docker-
 RUN echo 'xdebug.profiler_output_dir=/var/www/html' >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN echo 'xdebug.idekey = PHPSTORM' >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN echo 'xdebug.remote_autostart=1' >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+RUN echo 'date.timezone="Europe/Madrid"' >> /usr/local/etc/php/php.ini
 
 RUN apt-get install -y mysql-client
